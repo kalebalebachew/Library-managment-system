@@ -1,8 +1,8 @@
 <?php
-
+ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the submitted email and password
-    $email = $_POST["email"];
+    $userOrEmail = $_POST["userOrEmail"];
     $password = $_POST["password"];
 
     // Database connection configuration
@@ -20,24 +20,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare and execute a query to retrieve user credentials from the database
-    $query = "SELECT * FROM admin WHERE email = ?";
-    $statement = $conn->prepare($query);
-    $statement->bind_param("s", $email);
-    $statement->execute();
-    $result = $statement->get_result();
-    $row = $result->fetch_assoc();
+    $query = "SELECT * FROM student WHERE (email = '$userOrEmail' OR username = '$userOrEmail') AND password = '$password'";
+    $result = $conn->query($query);
     // Verify the user credentials
-    if ($row["email"] == $email && $row["password"] == $password) {
+    if ($result->num_rows ==1) {
         // Authentication successful
+        $_SESSION['UserName'] = $userOrEmail;
         header("Location: dashboard.html"); // Redirect to the welcome page
         exit();
     } else {
+        header("Location: homepage.php?error=1");
+        $_SESSION['error']= "Invalid Username/Email or Password";
         // Authentication failed
-        $error = "Invalid username or password. Please try again.";
+        exit();
     }
 
     // Close the database connection
-    $statement->close();
+    
     $conn->close();
 }
+unset($_SESSION['error']);
 ?>

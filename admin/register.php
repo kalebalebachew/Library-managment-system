@@ -6,10 +6,10 @@ $password = "MK025399";
 $dbname = "library management";
 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+if ($conn === false) {
+  die("Connection failed: " . mysqli_connect_error());
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,21 +21,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $idNumber = $_POST["idNumber"];
   $academicYear = $_POST["year"];
   $dept = $_POST["department"];
+  $userName = $_POST["username"];
 
   
-  $sql = "INSERT INTO student (id, firstName, lastName, sex, email, password, academicYear, department)
-  VALUES ('$idNumber','$first_name', '$last_name', '$gender', '$email', '$password', '$academicYear', '$dept')";
+  $sql = "INSERT INTO student VALUES ('$idNumber','$first_name', '$last_name', '$gender', '$email', '$password', '$academicYear', '$dept', '$userName')";
 
-  $statement = $conn->prepare($sql);
-  $statement->execute();
-
-  if ($conn->query($sql) === TRUE) {
-    header("Location: dashboard.html"); // Redirect to the welcome page
-        exit();
-  } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+  if (mysqli_query($conn, $sql)) {
+    echo "registered successfully";
+  }else{
+    echo "ERROR: Hush! Sorry $sql. "
+                . mysqli_error($conn);
   }
 }
-
-$conn->close();
-?>
+mysqli_close($conn);
+?> 

@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu {
+  flex: 1;
+  background-color: #ccc;
+  padding: 10px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+.details {
+  flex: 2;
+  padding: 10px;
+}
+
+.item-details {
+  display: none;
+}
+
+.item-details.show {
+  display: block;
+}

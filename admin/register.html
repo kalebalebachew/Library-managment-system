@@ -25,11 +25,17 @@
             </div>
             <div class="input-box">
               <label class="details" for="password">Password</label>
-              <input type="password" name="password" placeholder="Enter your password" required>
+              <input type="password" name="password" placeholder="Enter your password" required minlength="6">
             </div>
             <div class="input-box">
               <label class="details" for="confirm_password">Confirm Password</label>
-              <input type="password" name="confirm_password" placeholder="Confirm your password" required>
+              <input type="password" name="confirm_password" placeholder="Confirm your password" required minlength="6">
+            </div>
+            <small id="passwordMatchError" style="color: red;"></small><br>
+            <div class="input-box">
+              <label class="details" for="username">Username</label>
+              <input type="text" id="username" name="username" placeholder="Enter your username" required>
+              <span id="username-error"></span>
             </div>
             <div class="input-box">
               <label class="details" for="idNumber">Student ID Number</label>
@@ -60,10 +66,12 @@
             </div>
           </div>
           <div class="button">
-            <input type="submit" value="Register">
+            <input type="submit" id="register-btn" value="Register">
           </div>
+          
         </form>
       </div>
     </div>
+    <script src="register.js"></script>
   </body>
 </html>
