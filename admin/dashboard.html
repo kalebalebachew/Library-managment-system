@@ -1,73 +1,65 @@
-<!Doctype HTML>
-	<html>
-	<head>
-		<title></title>
-		<link rel="stylesheet" href="dashboard.css" type="text/css"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - User</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-bar">
+						<div class="logo">LMS</div>
+            <h2>Library Management System</h2>
+						<div class="profile-info">profile</div>
+        </nav>
+    </header>
 
+    <main class="main-body">
+			<aside class="menu-panel">
+				<ul class="service-list">
+					<li><a href="dashboard.html" id="home-link">Home</a></li>
+					<li><a href="#" id="books-link">Books</a></li>
+					<li><a href="#">My Borrowings</a></li>
+					<li><a href="#">Account Settings</a></li>
+					<li><a href="#">Logout</a></li>
+			</ul>
+			</aside>
 
-	<body>
-		
-		<div id="mySidenav" class="sidenav">
-		<p class="logo"><span>Admin </span>Dashboard</p>
-	  <a href="#"class="icon-a">Books</a>
-	  <a href="#"class="icon-a">Inventory</a>
-	  <a href="login.html"class="icon-a">Accounts</a>
-		<a href="homepage.html"class="icon-a">HOME</a>
+			  <section class="right" id="content">
+          <section class="welcome-message">
+            <h2 class="user-welcome">Explore Books</h2>
+              <form action="book.php" method="post" class="search-form">
+                <div class="user-details">
+                  <div class="input-box">
+                    <input type="email" name="email" placeholder="Search for a book . . . " required>
+                  </div>
+                  <div class="button">
+                    <input type="submit" value="search">
+                  </div>
+                </div>
+              </form>
+            <h1 class="catagory">Book Catagories</h1>
+            <div class="book-catalogs">
+              <button class="catagory-button">Science and Technology</button>
+              <button class="catagory-button">Literature and Fiction</button>
+              <button class="catagory-button">History</button>
+              <button class="catagory-button">Philosophy</button>
+              <button class="catagory-button more">more+</button>
+            </div>
+            </section>
+          <!--
+					  <h1 class="user-welcome">Hello, <span class="user-name">User!</span></h1>
+						<h2 class="intro-text">June 18, 2023 | Saturday 6:00 AM</h2>
+            <h2 class="intro-text">Welcome to the Library Management System</h2>
+            <p class="intro-parag">This is a Library Management System. Here you can manage your books, borrow them, and return them.</p>
+						-->
 
-	</div>
-	<div id="main">
+        </section>              
+    <footer>
+        <p>&copy; 2023 Library Management System. All rights reserved.</p>
+    </footer>
 
-		<div class="head">
-			<div class="col-div-6">
-	<span style="font-size:30px;cursor:pointer; color: white;" class="nav"  >☰ Dashboard</span>
-	<span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >☰ Dashboard</span>
-	</div>
-		
-		<div class="col-div-6">
-		<div class="profile">
-
-			<img src="" class="pro-img" />
-			<p>Admin <span></span></p>
-		</div>
-	</div>
-		<div class="clearfix"></div>
-	</div>
-
-		<div class="clearfix"></div>
-		<br/>
-		
-		<div class="col-div-3">
-			<div class="box">
-
-				
-			</div>
-		</div>
-		<div class="col-div-3">
-			<div class="box">
-				<p>88<br/><span>Librarians</span></p>
-				<i class="fa fa-list box-icon"></i>
-			</div>
-		</div>
-		<div class="col-div-3">
-			<div class="box">
-				<p>99<br/><span>Books</span></p>
-				<i class="fa fa-shopping-bag box-icon"></i>
-			</div>
-		</div>
-		<div class="col-div-3">
-			<div class="box">
-				<p>78<br/><span>Tasks</span></p>
-				<i class="fa fa-tasks box-icon"></i>
-			</div>
-		</div>
-		
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-	</body>
-
-
-	</html>
+    <script src="dashboard.js"></script>
+</body>
+</html>                                                                                                  
