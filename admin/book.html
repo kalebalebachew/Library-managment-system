@@ -1,35 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="book.css">
-  <title>Books</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>books</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="book.css">
 </head>
 <body>
-  <section class="welcome-message">
-    <h2 class="user-welcome">Explore Books</h2>
-    <div class="book-action">
-      <form action="book.php" method="post" class="search-form">
-        <div class="user-details">
-          <div class="input-box">
-            <input type="email" name="email" placeholder="Search for a book . . . " required>
-          </div>
-          <div class="button">
-            <input type="submit" value="search">
-          </div>
-        </div>
-      </form>
-    </div>
-    <h1 class="catagory">Book Catagories</h1>
-    <div class="book-catalogs">
-      <button class="catagory-button">Science and Technology</button>
-      <button class="catagory-button">Literature and Fiction</button>
-      <button class="catagory-button">History</button>
-      <button class="catagory-button">Philosophy</button>
-      <button class="catagory-button more">more+</button>
-    </div>
-    </section>
+    <header class="header">
+        <nav class="nav-bar">
+						<div class="logo">LMS</div>
+            <h2>Library Management System</h2>
+						<div class="profile-info">
+              <div class="profile-name">
+                <p class="person-name">Natnael Malike</p>
+                <p class="person-field">Admin</p>
+              </div>
+              <div class="profile-cartoon"><img class ="cartoon" src="cartoon.jpg" alt="cartoon-picture" ></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-body">
+			<aside class="menu-panel">
+				<ul class="service-list">
+					<li><a href="dashboard.html">Home</a></li>
+					<li><a href="book.html">Books</a></li>
+					<li><a href="borrowings.html">My Borrowings</a></li>
+					<li><a href="#">Account Settings</a></li>
+					<li><a href="#">Logout</a></li>
+			</ul>
+			</aside>
+			  <section class="right" id="content">
+          <section class="welcome-message">
+            <h2 class="user-welcome">Explore Books</h2>
+                      <form action="book.php" method="post" class="search-form">
+                        
+                        <div class="user-details">
+                          <select name="book-catagory" id="catagory-list">
+                            <option value="">Choose a catagory</option>
+                            <option class="catagory-option">Science and Technology</option>
+                            <option class="catagory-option">Fiction</option>
+                            <option class="catagory-option">History</option>
+                            <option class="catagory-option">Philosophy</option>
+                            <option class="catagory-option">Religion</option>
+                            <option class="catagory-option">Arts and Crafts</option>
+                            <option class="catagory-option">Non-Fiction</option>
+                            <option class="catagory-option">Travel</option>
+                            <option class="catagory-option">Self-help</option>
+                            <option class="catagory-option">Poetry</option>
+                            </select>
+                          <div class="input-box">
+                            <input type="email" name="email" placeholder="Search for a book . . . " required>
+                          </div>
+                          <div class="button">
+                            <input type="submit" value="search">
+                          </div>
+                        </div>
+                      </form>
+                      <div class="display-books" id="display-books">
+                        <div class="book-item">
+                          <div class="img-container"><img class="book-img" src="Sapiens A Brief History of Humankind.jpg" alt="book image"></div><hr>
+                          <div class="book-details">
+                            <p class="book-title">Title: <span>The Hobbit</span></p>
+                            <p class="book-author">Author: <span>J.R.R. Tolkien</span></p>
+                          </div>
+                       </div>
+                       <div class="book-item">
+                        <div class="img-container"><img class="book-img" src="The Gene An Intimate History.jpg" alt="book image"></div><hr>
+                        <div class="book-details">
+                          <p class="book-title">Title: <span>KAleb</span></p>
+                          <p class="book-author">Author: <span>J.R.R. Tolkien</span></p>
+                        </div>
+                     </div>
+                     <div class="book-item">
+                      <div class="img-container"><img class="book-img" src="cartoon.jpg" alt="book image"></div><hr>
+                      <div class="book-details">
+                        <p class="book-title">Title: <span>Malike</span></p>
+                        <p class="book-author">Author: <span>J.R.R. Tolkien</span></p>
+                          </div>
+                      </div>
+                      <div class="book-item">
+                        <div class="img-container"><img class="book-img" src="cartoon.jpg" alt="book image"></div><hr>
+                        <div class="book-details">
+                          <p class="book-title">Title: <span>Natnael</span></p>
+                          <p class="book-author">Author: <span>J.R.R. Tolkien</span></p>
+                        </div>
+                    </div>
+                  </div>
+            </section>
+            <div id="popupContainer">
+              <div id="popupContent"></div>
+              <a id="borrow-btn" href="borrowings.html">Want to Borrow ?</a>
+              <button id="closePopup">Close</button>
+            </div>
+        </section>              
+        <footer>
+          <p>&copy; 2023 Library Management System. All rights reserved.</p>
+      </footer>
+    
+    <script src="book.js"></script>
 </body>
-</html>
+</html>                                                                                                  
