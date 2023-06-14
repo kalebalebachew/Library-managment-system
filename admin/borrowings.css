@@ -1,0 +1,18 @@
+.user-welcome{
+  margin-bottom: 2rem;
+}
+.borrowed-book{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+  width: 50%;
+}
+.borrowed-book-status{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.emoji{
+ font-size: 7rem;
+}
+

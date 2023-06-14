@@ -6,6 +6,7 @@
     <title>Borrowings</title>
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="borrowings.css">
+    <link rel="stylesheet" href="book.css">
 </head>
 <body>
     <header class="header">
@@ -35,9 +36,17 @@
 			  <section class="right" id="content">
           <section class="welcome-message">
 					  <h1 class="user-welcome">Your Borrowing Section <span class="user-name">!</span></h1>
-            <div class="history-preview">
+            <div class="borrowed-book">
+              <div id="history-preview">
               
+              </div>
+              <div class="borrowed-book-status">
+                <span  class="emoji">😢</span>
+                <h2 id="book-status-show">Not Available at the moment !</h2>
+                <button>Make A Queue</button>
+              </div>
             </div>
+            
 						<div class="user-history">
               <div class="borrowed"></div>
               <div class="returned"></div>
