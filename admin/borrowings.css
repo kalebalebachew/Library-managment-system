@@ -15,4 +15,24 @@
 .emoji{
  font-size: 7rem;
 }
-
+#book-status-show{
+  text-align: center;
+  font-size: 2rem;
+  
+}
+.queue-btn{
+  border-radius: 1rem;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: .5rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color:black ;
+  margin-top: 2rem;
+}
+.queue-btn:hover{
+  background-color:rgb(236, 233, 230) ;
+  color: #000;
+}

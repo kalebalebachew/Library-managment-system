@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $userName = $_POST["username"];
 
   
+
   $sql = "INSERT INTO student VALUES ('$idNumber','$first_name', '$last_name', '$gender', '$email', '$password', '$academicYear', '$dept', '$userName')";
 
   if (mysqli_query($conn, $sql)) {
