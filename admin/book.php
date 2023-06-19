@@ -1,31 +1,31 @@
-<?php
-// Connect to the database
-$conn = new mysqli('localhost', 'natnael', 'MK025399', 'library management');
 
-// Check the connection
-if ($conn->connect_error) {
-    die('Connection failed: ' . $conn->connect_error);
+<?php
+
+if (isset($_GET['q'])) {
+  $q = $_GET['q'];
+  
+$con = mysqli_connect('localhost','natnael','MK025399');
+if (!$con) {
+  die('Could not connect: ' . mysqli_connect_error());
 }
 
-// Fetch data from the database
-$query = "SELECT * FROM your_table";
-$result = $conn->query($query);
-
-// Check if any rows were returned
-if ($result->num_rows > 0) {
-    // Fetch the data as an associative array
-    $data = $result->fetch_all(MYSQLI_ASSOC);
+mysqli_select_db($con,'library management');
+$sql="SELECT * FROM books WHERE genre = '".$q."'";
+$result = mysqli_query($con,$sql);
+while($row = mysqli_fetch_array($result)) {
+  echo '
+  <div class="book-item">
+      <div class="img-container"><img class="book-img" src="Sapiens A Brief History of Humankind.jpg" alt="book image"></div><hr>
+      <div class="book-details">
+          <p class="book-title">Title:' . $row["title"] . '<span></span></p>
+          <p class="book-author">Author <span>' . $row["author"] . '</span></p>
+      </div>
+      </div>
+  '   ;
+  
 }
 
-// Close the database connection
-$conn->close();
+mysqli_close($con);
+}
 ?>
-<?php
-// Encode the data as JSON
-$dataJson = json_encode($data);
-
-// Pass the JSON data to JavaScript
-echo `<script src ="book.js" >var data = $dataJson;</script>`;
-?>
-
 

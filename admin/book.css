@@ -1,9 +1,9 @@
-form .input-box{
+form .input-box {
   font-weight: 500;
   font-size: 1.8rem;
   width: 40rem;
 }
-.user-details .input-box input{
+.user-details .input-box input {
   height: 4rem;
   width: 100%;
   outline: none;
@@ -15,51 +15,50 @@ form .input-box{
   transition: all 0.3s ease;
 }
 .user-details .input-box input:focus,
-.user-details .input-box input:valid{
+.user-details .input-box input:valid {
   border-color: #000000;
 }
-form .button input{
+form .button input {
   border-radius: 2rem;
   border: none;
   color: #fff;
   font-size: 1.6rem;
   font-weight: 500;
-  padding: .7rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  background-color:black ;
-  
+  background-color: black;
 }
-#catagory-list{
+#catagory-list {
   font-size: 1.6rem;
   font-weight: 500;
   height: 4rem;
 }
-#catagory-list option{
+#catagory-list option {
   font-weight: 500;
   padding: 2rem 1.5rem;
   cursor: pointer;
-  background-color:rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   margin-top: 1rem;
 }
-.user-details{
+.user-details {
   display: flex;
   align-items: start;
   justify-content: center;
   gap: 2rem;
 }
-.user-details div{
- margin-right: 1rem;
- display: block;
+.user-details div {
+  margin-right: 1rem;
+  display: block;
 }
-.more{
-  background-color:rgb(221, 41, 41) ;
+.more {
+  background-color: rgb(221, 41, 41);
 }
-.catagory{
+.catagory {
   margin-top: 2rem;
   font-size: 2rem;
 }
-.display-books{
+.display-books {
   margin-top: 10rem;
   display: flex;
   gap: 2rem;
@@ -67,26 +66,30 @@ form .button input{
   align-items: center;
   justify-content: center;
 }
-.book-details{
+.book-details {
   margin-left: 1rem;
-  margin-top: 1rem;}
-.book-details p{
+  margin-top: 1rem;
+}
+.book-details p {
   font-weight: 500;
 }
-.book-details span{
+.book-details span {
   font-weight: normal;
 }
-.book-item{
+.book-item {
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 5px black;
   width: 25rem;
   cursor: pointer;
 }
-.book-img{
+.book-img {
   width: 100%;
 }
-.book-title, .book-author, .book-description, .book-genre{
+.book-title,
+.book-author,
+.book-description,
+.book-genre {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -109,19 +112,22 @@ form .button input{
   padding: 1rem;
   border-radius: 5rem;
   background-color: #000000;
-  color:white;
+  color: white;
   cursor: pointer;
 }
-#borrow-btn{
+#borrow-btn {
   border-radius: 2rem;
-  border: solid .2rem #fff;
+  border: solid 0.2rem #fff;
   color: #fff;
   font-size: 1.6rem;
   font-weight: 500;
-  padding: .7rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  background-color:black;
+  background-color: black;
   margin-bottom: 5rem;
   text-decoration: none;
+}
+#txtHint {
+  width: 40rem;
 }
