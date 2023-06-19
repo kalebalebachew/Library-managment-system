@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>books</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-bar">
+						<div class="logo">LMS</div>
+            <h2>Library Management System</h2>
+						<div class="profile-info">
+              <div class="profile-name">
+                <p class="person-name">Natnael Malike</p>
+                <p class="person-field">Librarian</p>
+              </div>
+              <div class="profile-cartoon"><img class ="cartoon" src="cartoon.jpg" alt="cartoon-picture" ></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-body">
+			<aside class="menu-panel">
+				<ul class="service-list">
+					<li><a href="librarianDashboard.html">Home</a></li>
+					<li><a href="bookDashboard.php">Show Books</a></li>
+          <li><a href="#">Add Books</a></li>
+          <li><a href="#">User Requests</a></li>
+					<li><a href="#">Account Settings</a></li>
+					<li><a href="#">Logout</a></li>
+			</ul>
+			</aside>
+      <section class="right" id="content">
+        <section class="welcome-message">
+          <h1 class="user-welcome">Hello, <span class="user-name">Librarian!</span></h1>
+          <span class="intro-text" id="current-time"></span>
+          <span style="font-size: large;"> || </span>
+          <span class="intro-text" id="current-date"></span>
+          <h2 class="intro-text">Welcome to the Library Management System</h2>
+          <p class="intro-parag">This is a Library Management System. Here you can manage your books, Add them, and return them.</p>
+        </section>
+      </section>              
+      <footer>
+        <p>&copy; 2023 Library Management System. All rights reserved.</p>
+    </footer>
+      <script src="librarian.js"></script>
+    </body>
+    </html>
